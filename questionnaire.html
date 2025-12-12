@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Estriol Face Cream Safety Questionnaire | HEAL Wellness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images/heal-logo.png" alt="HEAL Wellness logo" class="brand-logo">
+      </a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#peptides">Peptides</a>
+        <a href="index.html#glp1">GLP-1s</a>
+        <a href="index.html#creams">Face Creams</a>
+        <a href="questionnaire.html" class="active">Estriol Questionnaire</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section section-light">
+    <div class="container narrow">
+      <h1>Estriol Face Cream Safety Questionnaire</h1>
+      <p>
+        Because our signature face cream contains <strong>estriol</strong>, a form of estrogen,
+        we ask every patient to complete this brief safety questionnaire. Your answers help our
+        medical team determine whether this treatment is appropriate for you.
+      </p>
+      <p class="small">
+        This form does not replace a full medical evaluation and does not provide medical advice.
+        A licensed provider will review your responses before any prescription is written.
+      </p>
+
+      <!-- Replace the form action with your secure intake / EMR / Formspree endpoint -->
+      <form class="questionnaire-form">
+        <h2>Patient Information</h2>
+        <div class="field-row">
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input id="full-name" name="full_name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="dob">Date of birth</label>
+            <input id="dob" name="dob" type="date" required>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email-q">Email</label>
+            <input id="email-q" name="email" type="email" required>
+          </div>
+          <div class="field">
+            <label for="phone-q">Phone</label>
+            <input id="phone-q" name="phone" type="tel">
+          </div>
+        </div>
+
+        <h2>Medical History</h2>
+
+        <div class="field">
+          <label>Have you ever been diagnosed with any of the following?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="history" value="breast_cancer"> Breast cancer</label>
+            <label><input type="checkbox" name="history" value="other_hormone_dependent_cancer"> Other hormone-dependent cancer</label>
+            <label><input type="checkbox" name="history" value="blood_clots"> History of blood clots or clotting disorder</label>
+            <label><input type="checkbox" name="history" value="stroke_heart_attack"> Stroke or heart attack</label>
+            <label><input type="checkbox" name="history" value="liver_disease"> Active or severe liver disease</label>
+            <label><input type="checkbox" name="history" value="unexplained_vaginal_bleeding"> Unexplained vaginal bleeding</label>
+            <label><input type="checkbox" name="history" value="migraine_aura"> Migraines with aura</label>
+            <label><input type="checkbox" name="history" value="none"> None of the above</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Are you currently pregnant, planning pregnancy, or breastfeeding?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="pregnancy_status" value="yes" required> Yes</label>
+            <label><input type="radio" name="pregnancy_status" value="no"> No</label>
+            <label><input type="radio" name="pregnancy_status" value="not_applicable"> Not applicable</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Do you currently use any hormone therapy (oral, patch, cream, pellet, injection)?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="current_hormones" value="yes" required> Yes</label>
+            <label><input type="radio" name="current_hormones" value="no"> No</label>
+          </div>
+          <textarea name="current_hormones_details" rows="2" placeholder="If yes, please list medications, doses, and how long you have been using them."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Do you have any known allergies or sensitivities to estrogens, hormone creams, or topical products?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="allergies" value="yes" required> Yes</label>
+            <label><input type="radio" name="allergies" value="no"> No</label>
+          </div>
+          <textarea name="allergies_details" rows="2" placeholder="If yes, please describe your reaction(s)."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Have you ever had an adverse reaction to a prescription face cream or other dermatologic treatment?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="past_reaction" value="yes" required> Yes</label>
+            <label><input type="radio" name="past_reaction" value="no"> No</label>
+          </div>
+          <textarea name="past_reaction_details" rows="2" placeholder="If yes, please describe what happened."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Do you currently have any active skin conditions on your face or neck (e.g., rash, infection, open wounds, severe acne, rosacea flares)?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="skin_conditions" value="yes" required> Yes</label>
+            <label><input type="radio" name="skin_conditions" value="no"> No</label>
+          </div>
+          <textarea name="skin_conditions_details" rows="2" placeholder="If yes, please describe."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Please list all current prescription medications, over-the-counter medications, vitamins, and supplements.</label>
+          <textarea name="medications" rows="3" placeholder="Include doses if known."></textarea>
+        </div>
+
+        <div class="field">
+          <label>What are your main goals with estriol face cream?</label>
+          <textarea name="goals" rows="3" placeholder="Example: improve fine lines, dryness, texture, tone, etc."></textarea>
+        </div>
+
+        <h2>Consent & Acknowledgment</h2>
+
+        <div class="field consent">
+          <label>
+            <input type="checkbox" name="consent_review" required>
+            I understand that this questionnaire is used for screening purposes only and does not replace an in-person or telehealth evaluation with a licensed medical provider.
+          </label>
+          <label>
+            <input type="checkbox" name="consent_ri_
