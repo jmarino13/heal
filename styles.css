@@ -1,0 +1,255 @@
+:root {
+  --heal-brown: #a24c24;      /* main brand color (background like your logo) */
+  --heal-cream: #efe6db;      /* light text / background accent */
+  --heal-dark: #1b120f;
+  --heal-soft: #f7f1eb;
+  --heal-border: #e0cec0;
+  --font-heading: "Playfair Display", "Times New Roman", serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: #fffdf9;
+  color: var(--heal-dark);
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.section-light {
+  background-color: var(--heal-soft);
+}
+
+.section-accent {
+  background-color: var(--heal-brown);
+  color: var(--heal-cream);
+}
+
+.section-accent .section-title {
+  color: #fff;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-intro {
+  max-width: 640px;
+  margin-bottom: 2.5rem;
+}
+
+/* Top bar */
+
+.top-bar {
+  background-color: var(--heal-brown);
+  color: var(--heal-cream);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Header & nav */
+
+.site-header {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid #f1e3d6;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  gap: 1.5rem;
+}
+
+.brand-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--heal-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--heal-brown);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.btn-primary {
+  background-color: var(--heal-brown);
+  color: var(--heal-cream);
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: var(--heal-brown);
+  border-color: var(--heal-brown);
+}
+
+.btn-outline:hover {
+  background-color: var(--heal-brown);
+  color: var(--heal-cream);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--heal-brown);
+  border-color: var(--heal-brown);
+}
+
+.btn-ghost:hover {
+  background-color: var(--heal-soft);
+}
+
+.btn-light {
+  background-color: var(--heal-cream);
+  color: var(--heal-brown);
+  border-color: var(--heal-cream);
+}
+
+.btn-light:hover {
+  opacity: 0.94;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* Hero */
+
+.hero {
+  padding: 4rem 0 4.5rem;
+  background: linear-gradient(135deg, #fff8f2 0%, #f3e1d3 45%, #fffdf9 100%);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--heal-brown);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.hero-text {
+  font-size: 1rem;
+  max-width: 32rem;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6f5545;
+}
+
+.hero-card {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-card-inner {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem 2rem 2.2rem;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--heal-border);
+}
+
+.hero-card-inner h2 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-top: 0;
+}
+
+.hero-card-inner p {
+  font-size: 0.95rem;
+}
+
+.hero-list {
+  padding-left: 1.1rem;
+  margin: 0 0
